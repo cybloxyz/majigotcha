@@ -1,4 +1,4 @@
-27265739485485368
+27267517031844209
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -59758,6 +59758,13 @@ MODULE_DFR0299
 0
 16
 16
+DFR0299
+TTP223-CAPACITIVE
+
+
+0
+3
+3
 DFR0768-DFROBOT-Symbol-Kicad-563352
 DFR0768
 
