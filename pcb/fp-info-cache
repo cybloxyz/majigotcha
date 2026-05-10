@@ -1,4 +1,4 @@
-27267517031844209
+27271072600009325
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -107547,6 +107547,20 @@ XIAO-Generic-Hybrid-14P-2.54-21X17.8MM
 0
 14
 14
+fpsc
+Adafruit_SSD1306
+Adafruit SSD1306 OLED 1.3 inch 128x64 I2C & SPI https://learn.adafruit.com/monochrome-oled-breakouts/downloads
+Adafruit SSD1306 OLED 1.3 inch 128x64 I2C & SPI 
+0
+8
+8
+fpsc
+LCD_OLED_128X64_1.3_I2C
+
+
+0
+4
+4
 fpsc
 cs
 
