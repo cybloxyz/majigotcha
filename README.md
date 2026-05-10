@@ -1,10 +1,12 @@
 # MAJIGOTCHA!
+![majigotcha](pics/nobg-majigotcha.png)
 MAJIGOTCHA is a handheld digital pet in a small, bear head-shaped device. Users nurture a virtual creature from hatching through different life stages by feeding, cleaning, and playing with it using three buttons. Proper care determines its growth, while neglect can cause it to die.
 
 ## why MAJIGOTCHA?
 can't afford the real tamagotchi? yeah that is why i build my own, it is not tamagotchi it is MAJIGOTCHA, it has my dream features such fingerprint and touch sensor, i make this because my sister is really dream to have a tamagotchi but since it is too expensive to buy i prefer make this by my self, since i want something more than just a tamagotchi.
 
 ## features
+![majigotcha](pics/nobg-closeup.png)
 this is the first version of MAJIGOTCHA! it has really great features lemme break down:
 > touch sensor, this mean you could pat your pet! tame it!
 
