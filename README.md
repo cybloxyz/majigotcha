@@ -1,9 +1,93 @@
 # MAJIGOTCHA!
-## why MAJIGOTCHA?
-## features
-## code example, pcb and schema
-## components
+MAJIGOTCHA is a handheld digital pet in a small, bear head-shaped device. Users nurture a virtual creature from hatching through different life stages by feeding, cleaning, and playing with it using three buttons. Proper care determines its growth, while neglect can cause it to die.
 
+## why MAJIGOTCHA?
+can't afford the real tamagotchi? yeah that is why i build my own, it is not tamagotchi it is MAJIGOTCHA, it has my dream features such fingerprint and touch sensor, i make this because my sister is really dream to have a tamagotchi but since it is too expensive to buy i prefer make this by my self, since i want something more than just a tamagotchi.
+
+## features
+this is the first version of MAJIGOTCHA! it has really great features lemme break down:
+> touch sensor, this mean you could pat your pet! tame it!
+
+> fingerprint sensor, make it only yours..it will recognizes your fingerprint and can only be tamed with you.
+
+> potentiometer scroll, since this MAJIGOTCHA has more complex features, the screen-menu could be navigate by potentiometer and button.
+
+> in future i will upgrade this MAJIGOTCHA firmware to OTA and various casing.
+
+## code example, pcb and schema
+i made the case using [onshape](https://onshape.com) and here is the document link [MAJIGOTCHA-case](https://cad.onshape.com/documents/353c81332f9ae163598e6183/w/df33fd15e80ae307a4e30d2f/e/6c68072ba9f649a3b4a35ab0)
+i am using RV09 vertical potentiometer so it will be solderen onPCB and for things such OLED, TTP223, HLK-ZW101 i use pinHeader 2.54 instead
+![schema](pics/schema.png)
+in this schema i'm using global labels since it is easier to understand and to read, for the PCB it is 2 layer, and contain vias, the pcb's size is not more than 50mmx50mm which it resulting in cheaper price.
+![pcb editor](pics/pcbeditor.png)
+![pcb](pics/3dpcb.png)
+
+this MAJIGOTCHA is similar to tamagotchi BUT it is has more unique features, in here every stats even tame, inTamingProgress or notTame is has it own sprite, here is the bitmaps example:
+```
+const unsigned char PROGMEM notTame[] = {
+  0b00000000, 0b00000000,
+  0b00000000, 0b00000000,
+  0b00001100, 0b01100000,
+  0b00010011, 0b10010000,
+  0b00010000, 0b00010000,
+  0b00100100, 0b01001000,
+  0b00010010, 0b10010000,
+  0b00010000, 0b00010000,
+  0b00001000, 0b00100000,
+  0b00000111, 0b11000000,
+  0b00001000, 0b00100000,
+  0b00010100, 0b01010000,
+  0b00010010, 0b10010000,
+  0b00001100, 0b01100000,
+  0b00010011, 0b10010000,
+  0b00001100, 0b01100000
+};
+```
+in notTame stat it means you rarely identify your fingerprint and interact with him, remember it is only you and some of your friends fingerprint! other than that he will very very badMood!
+```
+const unsigned char PROGMEM curious[] = {
+  0b00000000, 0b00000000,
+  0b00000000, 0b00000000,
+  0b00001100, 0b01100000,
+  0b00010011, 0b10010000,
+  0b00010000, 0b00010000,
+  0b00001010, 0b10100000,
+  0b00010010, 0b10010000,
+  0b00010000, 0b00010000,
+  0b00001000, 0b00100000,
+  0b00000111, 0b11000000,
+  0b00001000, 0b00100000,
+  0b00010100, 0b01010000,
+  0b00010010, 0b10010000,
+  0b00001100, 0b01100000,
+  0b00010011, 0b10010000,
+  0b00001100, 0b01100000
+};
+```
+curious stat is when his tame progress is around 50 like more than 30 but less than 50, he starts curious with you! keep interact with him until he is happy!
+```
+const unsigned char PROGMEM happy[] = {
+  0b00000000, 0b00000000,
+  0b00000000, 0b00000000,
+  0b00001100, 0b01100000,
+  0b00010011, 0b10010000,
+  0b00010000, 0b00010000,
+  0b00001010, 0b10100000,
+  0b00010001, 0b00010000,
+  0b00010000, 0b00010000,
+  0b00001000, 0b00100000,
+  0b00000111, 0b11000000,
+  0b00001000, 0b00100000,
+  0b00010100, 0b01010000,
+  0b00010010, 0b10010000,
+  0b00001100, 0b01100000,
+  0b00010011, 0b10010000,
+  0b00001100, 0b01100000
+};
+```
+if you reached happy! it means he likes you so much and he is happy to be with you! keep it like this and you both will be good friends!
+
+## components
 | no    | name  | qty | price in idr |
 |-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----|--------------|
 | 1     | [seeeduino xiao esp32-c6](https://shopee.co.id/Pre-Soldered-Seeeduino-Xiao-ESP32-C3-C6-S3-nRF52840-Mini-Development-Board-wifi-module-bluetooth5.0-i.1733652584.44605902551?extraParams=%7B%22display_model_id%22%3A315532221124%2C%22model_selection_logic%22%3A3%7D&sp_atk=1e86e1a1-d50f-4ddf-872c-1a7bf0063a2c&xptdk=1e86e1a1-d50f-4ddf-872c-1a7bf0063a2c)                | 1   | 125000       |
